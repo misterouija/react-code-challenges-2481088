@@ -1,10 +1,11 @@
-export default function Color ({ hex, name }) {
-  return (
-    <button
-      className='color-square'
-      style={{ backgroundColor: hex }}
-    >
-      <h2>{name}</h2>
-    </button>
-  )
+export default function Color({ hex, name, setBackgroundColor }) {
+    return (
+        <button
+            className='color-square'
+            style={{ backgroundColor: hex, cursor: 'pointer' }}
+            onClick={() => setBackgroundColor(hex)}
+        >
+            <h2>{name}</h2>
+        </button>
+    );
 }
